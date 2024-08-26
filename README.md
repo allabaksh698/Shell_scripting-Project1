@@ -2,11 +2,18 @@
 
 ## Overview
 
-This shell scripting project automates the process of listing various resources in an AWS account. By using this script, users can quickly get an overview of the services and resources they have running in a specific AWS region.
+This project provides a shell script that automates the process of listing resources in an AWS account. The script supports multiple AWS services, allowing users to quickly retrieve information about their cloud infrastructure. This can be especially useful for auditing, monitoring, or managing resources across various AWS services.
+
+## Features
+
+- Lists resources from different AWS services such as EC2, S3, RDS, IAM, and more.
+- Supports specifying the AWS region and service as input parameters.
+- Checks for AWS CLI installation and configuration before execution.
+- Provides clear error messages and usage instructions.
 
 ## Supported AWS Services
 
-The script supports the following AWS services:
+The script can list resources for the following AWS services:
 
 1. EC2
 2. RDS
@@ -15,20 +22,14 @@ The script supports the following AWS services:
 5. VPC
 6. IAM
 7. Route53
-8. CloudWatch
-9. CloudFormation
-10. Lambda
-11. SNS
-12. SQS
-13. DynamoDB
-14. EBS
-
-## How It Works
-
-The script takes two arguments from the command line: the AWS region and the service name. It then uses the AWS CLI to list the resources for the specified service in the given region. If the required arguments are not provided or if an invalid service is specified, the script will display an error message and exit.
+8. Lambda
+9. SNS
+10. SQS
+11. DynamoDB
+12. EBS
 
 ## Prerequisites
 
-- **AWS CLI**: Make sure that the AWS CLI is installed and configured on your system. You can install it by following the official [AWS CLI installation guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
-- **AWS Credentials**: Your AWS CLI must be configured with valid AWS credentials. You can configure it using the `aws configure` command.
-- **Bash Shell**: The script is designed to be run in a Bash shell environment.
+- AWS CLI installed and configured on the machine.
+- Appropriate IAM permissions to access the AWS resources.
+- Bash shell environment.
